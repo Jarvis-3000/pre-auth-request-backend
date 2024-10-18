@@ -18,10 +18,10 @@ const app: Application = express();
 // Middlewares
 // CORS configuration
 const corsOptions = {
-  origin: '*', // Allow all origins
+  origin: ['http://localhost:3000', 'https://your-production-url.com'],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
-  allowedHeaders: 'Content-Type, Authorization', // Allowed headers
-  credentials: true, 
+  allowedHeaders: 'X-Requested-With, Content-Type, Authorization', // Allowed headers
+  credentials: true,
 };
 
 // Use CORS middleware
