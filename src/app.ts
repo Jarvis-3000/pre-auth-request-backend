@@ -18,10 +18,10 @@ const app: Application = express();
 // Middlewares
 // CORS configuration
 const corsOptions = {
-  origin: '*', // Allow all origins
+  origin: ['pre-auth-request.vercel.app', 'localhost:3000'], // Allow all origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed methods
   allowedHeaders: 'X-Requested-With, Content-Type, Authorization', // Allowed headers
-  credentials: true, 
+  credentials: true,
 };
 
 // Use CORS middleware
